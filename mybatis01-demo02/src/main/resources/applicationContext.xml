@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class="com.lfq.xc.UserServicelmpl">
+        <property name="name" value="李富全"></property>
+    </bean>
+    <bean id="Bean1" class="com.lfq.xc.demo2.Bean1"></bean>
+
+    <bean id="Bean2" class="com.lfq.xc.demo2.Bean2Factory" factory-method="Bean2create"></bean>
+
+    <bean id="Bean3Factory" class="com.lfq.xc.demo2.Bean3Factory"></bean>
+
+    <bean id="Bean3" factory-bean="Bean3Factory" factory-method="createBean3"></bean>
+</beans>
